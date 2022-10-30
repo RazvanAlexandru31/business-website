@@ -288,3 +288,112 @@ html {
     transition: width 1s;
 }
 /* End of Navbar */
+
+/* Section 2 */
+
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #15181c;
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+    position: relative;
+}
+
+.section-heading {
+    font-size: 10rem;
+    font-weight: 600;
+    color: #f1f2eb;
+    text-decoration: underline;
+    position: absolute;
+    top: 20rem;
+}
+
+.video-container {
+    width: 80rem;
+    height: 45rem;
+    position: absolute;
+    top: 5rem;
+    right: 10rem;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    transition: opacity .4s;
+}
+
+.section-2-paragraph {
+    width: 100rem;
+    position: absolute;
+    bottom: 5rem;
+    right: 15rem;
+    font-size: 1.4rem;
+    color: #1c7293;
+    border-top: 0.3rem double #1c7293;
+    border-bottom: 0.3rem double #1c7293;
+    padding: 2rem;
+}
+
+.author {
+    margin-top: 1rem;
+    text-align: end;
+    color: #eeeeee;
+}
+
+.fa-quote-left {
+    color: #eeeeee;
+}
+
+.fa-quote-right {
+    color: #eeeeee;
+}
+
+.controls {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+.video-container:hover .controls {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in;
+}
+
+
+.buttons {
+    padding: 1rem;
+}
+
+.buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #ff5722;
+}
+
+.video-bar-container {
+    width: 100%;
+    height: 0.7rem;
+    background-color: #ff5722;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #222831;
+    transition: width .5s linear;
+}
+/* End of Sectio 2 */

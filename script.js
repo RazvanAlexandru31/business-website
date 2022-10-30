@@ -12,3 +12,47 @@ menu.addEventListener('click', () => {
     line2.classList.toggle('change')
     line3.classList.toggle('change')
 })
+
+// make video work
+const video = document.querySelector('.video')
+const btn = document.querySelector('.buttons i')
+const bar = document.querySelector('.video-bar')
+
+
+let isPlaying = false
+const playVideo = () => {
+    video.play()
+    isPlaying = true
+    btn.className = 'far fa-pause-circle'
+    btn.title = 'Pause'
+    video.style.opacity = '.8'
+}
+
+const pauseVideo =() => {
+    video.pause()
+    isPlaying = false
+    btn.className = 'far fa-play-circle'
+    btn.title = 'Play'
+    video.style.opacity = '.3'
+}
+
+const playPause  = () => {
+    isPlaying ? pauseVideo() : playVideo()
+}
+
+btn.addEventListener('click', () => {
+    playPause()
+    console.log(123)
+})
+
+video.addEventListener('timeupdate', () => {
+    // console.log(video.currentTime, video.duration)
+    const barWidth = (video.currentTime / video.duration) * 100
+    console.log(barWidth)
+    bar.style.width = `${barWidth}%`
+    if(video.ended){
+        btn.className = 'far fa-play-circle'
+        btn.title = 'Play'
+        video.style.opacity = '.3'
+    }
+})
