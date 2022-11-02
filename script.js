@@ -4,6 +4,7 @@ const navlist = document.querySelector(".navlist");
 const line1 = document.querySelector(".line-1");
 const line2 = document.querySelector(".line-2");
 const line3 = document.querySelector(".line-3");
+const thisYear = document.getElementById('date')
 
 menu.addEventListener("click", () => {
   navbar.classList.toggle("change");
@@ -70,3 +71,8 @@ var swiper = new Swiper(".mySwiper", {
     slideShadows: true,
   }
 });
+
+
+const date = new Date();
+const today = date.toLocaleDateString('en-US', {year: 'numeric'})
+thisYear.textContent = today;
